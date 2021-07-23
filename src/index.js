@@ -1,19 +1,19 @@
 /**
- * При запуске приложения через yarn start,
- * этот файл будет исполняться автоматически при его редактировании
- * или редактировании тех файлов, которые вы импортировали в этот файл через import.
- * Браузер сам будет перезагружать страницу, когда происходят сохранения изменений
- * в отслеживаемых файлах.
+ При запуске прилож//ения через yarn start,
+ этот файл будет ис//полняться автоматически при его редактировании
+ или редактировании// тех файлов, которые вы импортировали в этот файл через import.
+ Браузер сам будет //перезагружать страницу, когда происходят сохранения изменений
+ в отслеживаемых фа//йлах.
  *
- * Для удобства работы пока все закомментированно.
- * При работе над задачами раскомментируйте нужные импорты и изменяйте этот файл, как вам удобно.
+ Для удобства работ//ы пока все закомментированно.
+ При работе над зад//ачами раскомментируйте нужные импорты и изменяйте этот файл, как вам удобно.
  *
- * Решение каждой из задач оформляйте в том файле, где задача была описана.
- * Далее, импортируете функцию сюда, и вызывайте ее.
+ Решение каждой из //задач оформляйте в том файле, где задача была описана.
+ Далее, импортирует//е функцию сюда, и вызывайте ее.
  *
- * Для задач на es-features, ниже, уже подготовлены вызовы функций из задач.
+ Для задач на es-fe//atures, ниже, уже подготовлены вызовы функций из задач.
  *
- * Для задач на array-practice импортируйте написанные функции сюда и проверяйте их работу тут.
+ Для задач на array//-practice импортируйте написанные функции сюда и проверяйте их работу тут.
  */
 
 // import { task1Old, task1New } from './es-features/task1';
@@ -106,4 +106,51 @@
 // console.log('task15 new', task15New([['a', 1], ['b', 2]])); // {a: 1, b: 2}
 
 // console.log('=============');
-import './array-practice/task1';
+import any from './array-practice/task1';
+import arrayDiff from './array-practice/task2';
+import forEachRight from './array-practice/task3';
+import union from './array-practice/task4';
+import createGenerator from './array-practice/task5';
+import transformArrayToNumber from './array-practice/task6';
+
+console.log('=============');
+console.log('any', any([0, 1, 2, 0], x => x >= 2)); // -> true
+console.log('any', any([0, 0, 1, 0])); // -> true
+console.log('any', any([0, 0, 0, 0])); // -> false
+console.log('=============');
+console.log('arrayDiff', arrayDiff([1, 2, 3], [1, 2, 4])); // -> [3, 4]
+console.log('arrayDiff', arrayDiff([1, 3, 3, 4], [1, 3, '4'])); // -> [4, '4']
+console.log('=============');
+console.log('forEachRight', forEachRight([1, 2, 3, 4], val => console.log(val)));
+console.log('=============');
+console.log('union', union([5, 1, 2, 3, 3], [4, 3, 2])); // -> [5, 1, 2, 3, 4]
+console.log('union', union([5, 1, 3, 3, 4], [1, 3, 4])); // -> [5, 1, 3, 4]
+console.log('=============');
+const generator = createGenerator([1, '6', 3, 2]);
+console.log('createGenetator', generator.next()); // -> 1
+console.log('createGenetator', generator.next()); // -> '6'
+console.log('createGenetator', generator.next()); // -> 3
+console.log('createGenetator', generator.next()); // -> 2
+console.log('createGenetator', generator.next()); // -> 'Complete!'
+console.log('createGenetator', generator.next()); // -> 'Complete!'
+console.log('=============');
+console.log(
+  'transformArrayToNumber',
+  transformArrayToNumber([10, 20, 30], (acc, item) => acc + item)
+); // -> 60
+console.log(
+  'transformArrayToNumber',
+  transformArrayToNumber([10, 20, 30], (acc, item) => acc + item, 10)
+); // -> 70
+console.log(
+  'transformArrayToNumber',
+  transformArrayToNumber([10, 20, 30], (acc, item) => acc * item)
+); // -> 0
+console.log(
+  'transformArrayToNumber',
+  transformArrayToNumber([10, 20, 30], (acc, item) => acc * item, 1)
+); // -> 6000
+console.log(
+  'transformArrayToNumber',
+  transformArrayToNumber([10, 20, 30], (acc, item) => acc - item)
+); // -> -60
