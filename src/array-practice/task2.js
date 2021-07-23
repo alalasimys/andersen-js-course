@@ -15,3 +15,17 @@
  * console.log(arrayDiff([1, 2, 3], [1, 2, 4])); -> [3, 4]
  * console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); -> [4, '4']
  */
+export default function arrayDiff(firstArr, secondArr) {
+  const newArr = [];
+  firstArr.forEach(firstArrItem => {
+    if (!secondArr.includes(firstArrItem)) {
+      newArr.push(firstArrItem);
+    }
+  });
+  secondArr.forEach(secondArrItem => {
+    if (!firstArr.includes(secondArrItem)) {
+      newArr.push(secondArrItem);
+    }
+  });
+  return newArr;
+}
