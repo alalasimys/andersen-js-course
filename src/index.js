@@ -113,6 +113,7 @@ import union from './array-practice/task4';
 import createGenerator from './array-practice/task5';
 import transformArrayToNumber from './array-practice/task6';
 import take from './array-practice/task7';
+import without from './array-practice/task8';
 
 console.log('=============');
 console.log('any', any([0, 1, 2, 0], x => x >= 2)); // -> true
@@ -155,6 +156,9 @@ console.log(
   'transformArrayToNumber',
   transformArrayToNumber([10, 20, 30], (acc, item) => acc - item)
 ); // -> -60
-
+console.log('=============');
 console.log('take', take([1, 2, 3], 5)); // -> [1, 2, 3]
 console.log('take', take([1, 2, 3], 2)); // -> [1, 2]
+console.log('=============');
+console.log('without', without([2, 1, 2, 3], 1, 2)); // -> [3]
+console.log('without', without([2, 1, 10, 20], 1, 2)); // -> [10, 20]
