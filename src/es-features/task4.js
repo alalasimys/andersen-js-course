@@ -40,6 +40,6 @@ export function task4New() {
     x,
     y,
     bar: () => this.x + this.y,
-    ['baz' + foo()]: 'new field',
+    [`baz ${foo()}`]: 'new field',
   };
 }
