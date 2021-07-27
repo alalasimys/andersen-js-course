@@ -56,34 +56,26 @@ export function task10Old() {
 
 class NewA {
   constructor(name) {
-    this._name = name;
-  }
-
-  get name() {
-    return this._name;
-  }
-
-  set name(newName) {
-    this._name = newName;
+    this.name = name;
   }
 }
 
 class NewB extends NewA {
   constructor(name, age) {
     super(name);
-    this._age = age;
+    this.age = age;
   }
 
   static defaultUser() {
     return new NewB('test', 0);
   }
 
-  get age() {
-    return this._age;
+  get getAge() {
+    return this.age;
   }
 
-  set age(newAge) {
-    this._age = newAge;
+  set setAge(newAge) {
+    this.age = newAge;
   }
 
   get color() {
