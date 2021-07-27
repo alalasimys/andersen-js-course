@@ -1,3 +1,3 @@
 import './styles/main.css';
 
-console.log('Hi');
+import './asynchronous-programming/task_1';
