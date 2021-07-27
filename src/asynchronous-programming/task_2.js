@@ -17,3 +17,4 @@ function failureCb(error) {
 
 parseJSON('{ "x": 10 }', successCb, failureCb);
 parseJSON('{ x }', successCb, failureCb);
+parseJSON('{  }', successCb, failureCb);
