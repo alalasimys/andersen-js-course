@@ -16,8 +16,5 @@
  */
 
 export default function any(arr, callback) {
-  if (callback) {
-    return arr.some(elem => callback(elem));
-  }
-  return arr.some(elem => Boolean(elem));
+  return callback === Boolean ? arr.some(elem => callback(elem)) : arr.some(elem => Boolean(elem));
 }

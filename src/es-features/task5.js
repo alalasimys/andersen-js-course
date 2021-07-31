@@ -17,5 +17,8 @@ export function task5Old(array, obj) {
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
 export function task5New(array, obj) {
-  return [...array, ...Object.values(obj)];
+  const [arrName, arrVal] = array;
+  const { name, val } = obj;
+
+  return [arrName, arrVal, name, val];
 }

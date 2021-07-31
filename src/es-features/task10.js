@@ -58,6 +58,10 @@ class NewA {
   constructor(name) {
     this.name = name;
   }
+
+  getName() {
+    return this.name;
+  }
 }
 
 class NewB extends NewA {
@@ -87,7 +91,7 @@ class NewB extends NewA {
   }
 
   getName(text) {
-    return `${this.name} ${text}`;
+    return `${super.getName()} ${text}`;
   }
 }
 

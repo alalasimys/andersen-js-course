@@ -19,5 +19,5 @@ export function task12Old(object, firstFieldName, secondFieldName) {
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
 export function task12New(object, firstFieldName, secondFieldName) {
-  return object[firstFieldName]?.[secondFieldName];
+  return object?.[firstFieldName]?.[secondFieldName];
 }

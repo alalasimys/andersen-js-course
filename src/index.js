@@ -24,8 +24,8 @@
 // import { task6Old, task6New } from './es-features/task6';
 // import { task7Old, task7New } from './es-features/task7';
 // import { task8Old, task8New } from './es-features/task8';
-// import { task9Old, task9New } from './es-features/task9';
-import { task10Old, task10New } from './es-features/task10';
+import { task9Old, task9New } from './es-features/task9';
+// import { task10Old, task10New } from './es-features/task10';
 // import { task11Old, task11New } from './es-features/task11';
 // import { task12Old, task12New } from './es-features/task12';
 // import { task13Old, task13New } from './es-features/task13';
@@ -72,13 +72,13 @@ import { task10Old, task10New } from './es-features/task10';
 
 // console.log('=============');
 
-// console.log('task9 old', task9Old()); // [true, 1]
-// console.log('task9 new', task9New()); // [true, 1]
+console.log('task9 old', task9Old()); // [true, 1]
+console.log('task9 new', task9New()); // [true, 1]
 
 // console.log('=============');
 
-console.log('task10 old', task10Old()); // {name: 'Max', age: 12, color: red}
-console.log('task10 new', task10New()); // {name: 'Max', age: 12, color: red}
+// console.log('task10 old', task10Old()); // {name: 'Max', age: 12, color: red}
+// console.log('task10 new', task10New()); // {name: 'Max', age: 12, color: red}
 
 // console.log('=============');
 
@@ -110,7 +110,7 @@ console.log('task10 new', task10New()); // {name: 'Max', age: 12, color: red}
 // import any from './array-practice/task1';
 // import arrayDiff from './array-practice/task2';
 // import forEachRight from './array-practice/task3';
-// import union from './array-practice/task4';
+// import { union } from './array-practice/task4';
 // import createGenerator from './array-practice/task5';
 // import transformArrayToNumber from './array-practice/task6';
 // import take from './array-practice/task7';

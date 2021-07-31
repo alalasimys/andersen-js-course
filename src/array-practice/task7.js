@@ -13,5 +13,5 @@
  */
 
 export default function take(arr, num) {
-  return arr.splice(0, num);
+  return arr.slice(0, num);
 }

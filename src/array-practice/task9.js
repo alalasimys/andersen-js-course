@@ -12,10 +12,5 @@
  */
 
 export default function indexOfAll(arr, value) {
-  return arr.reduce((acc, item, index) => {
-    if (item === value) {
-      acc.push(index);
-    }
-    return acc;
-  }, []);
+  return arr.reduce((acc, item, index) => (item === value ? [...acc, index] : acc), []);
 }
