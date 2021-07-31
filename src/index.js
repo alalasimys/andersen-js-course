@@ -1,19 +1,19 @@
 /**
- * При запуске приложения через yarn start,
- * этот файл будет исполняться автоматически при его редактировании
- * или редактировании тех файлов, которые вы импортировали в этот файл через import.
- * Браузер сам будет перезагружать страницу, когда происходят сохранения изменений
- * в отслеживаемых файлах.
+ При запуске приложения через yarn start,
+ этот файл будет исполняться автоматически при его редактировании
+ или редактировании тех файлов, которые вы импортировали в этот файл через import.
+ Браузер сам будет перезагружать страницу, когда происходят сохранения изменений
+ в отслеживаемых файлах.
  *
- * Для удобства работы пока все закомментированно.
- * При работе над задачами раскомментируйте нужные импорты и изменяйте этот файл, как вам удобно.
+ Для удобства работы пока все закомментированно.
+ При работе над задачами раскомментируйте нужные импорты и изменяйте этот файл, как вам удобно.
  *
- * Решение каждой из задач оформляйте в том файле, где задача была описана.
- * Далее, импортируете функцию сюда, и вызывайте ее.
+ Решение каждой из задач оформляйте в том файле, где задача была описана.
+ Далее, импортируете функцию сюда, и вызывайте ее.
  *
- * Для задач на es-features, ниже, уже подготовлены вызовы функций из задач.
+ Для задач на es-features, ниже, уже подготовлены вызовы функций из задач.
  *
- * Для задач на array-practice импортируйте написанные функции сюда и проверяйте их работу тут.
+ Для задач на array-practice импортируйте написанные функции сюда и проверяйте их работу тут.
  */
 
 // import { task1Old, task1New } from './es-features/task1';
@@ -24,14 +24,13 @@
 // import { task6Old, task6New } from './es-features/task6';
 // import { task7Old, task7New } from './es-features/task7';
 // import { task8Old, task8New } from './es-features/task8';
-// import { task9Old, task9New } from './es-features/task9';
+import { task9Old, task9New } from './es-features/task9';
 // import { task10Old, task10New } from './es-features/task10';
 // import { task11Old, task11New } from './es-features/task11';
 // import { task12Old, task12New } from './es-features/task12';
 // import { task13Old, task13New } from './es-features/task13';
 // import { task14Old, task14New } from './es-features/task14';
 // import { task15Old, task15New } from './es-features/task15';
-
 
 // console.log('task1 old', task1Old(10) === 500); // true
 // console.log('task1 new', task1New(10) === 500); // true
@@ -73,8 +72,8 @@
 
 // console.log('=============');
 
-// console.log('task9 old', task9Old()); // [true, 1]
-// console.log('task9 new', task9New()); // [true, 1]
+console.log('task9 old', task9Old()); // [true, 1]
+console.log('task9 new', task9New()); // [true, 1]
 
 // console.log('=============');
 
@@ -83,13 +82,13 @@
 
 // console.log('=============');
 
-// console.log('task11 old', task11Old({a: null}, 'a')); // false
-// console.log('task11 new', task11New({a: null}, 'a')); // false
+// console.log('task11 old', task11Old({ a: null }, 'a')); // false
+// console.log('task11 new', task11New({ a: null }, 'a')); // false
 
 // console.log('=============');
 
-// console.log('task12 old', task12Old({ obj2: { some: true }}, 'obj2', 'some2' )); // undefined
-// console.log('task12 new', task12New({ obj2: { some: true }}, 'obj2', 'some2' )); // undefined
+// console.log('task12 old', task12Old({ obj2: { some: true } }, 'obj2', 'some2')); // undefined
+// console.log('task12 new', task12New({ obj2: { some: true } }, 'obj2', 'some2')); // undefined
 
 // console.log('=============');
 
@@ -107,3 +106,67 @@
 // console.log('task15 new', task15New([['a', 1], ['b', 2]])); // {a: 1, b: 2}
 
 // console.log('=============');
+
+// import any from './array-practice/task1';
+// import arrayDiff from './array-practice/task2';
+// import forEachRight from './array-practice/task3';
+// import { union } from './array-practice/task4';
+// import createGenerator from './array-practice/task5';
+// import transformArrayToNumber from './array-practice/task6';
+// import take from './array-practice/task7';
+// import without from './array-practice/task8';
+// import indexOfAll from './array-practice/task9';
+// import { meetups, membersOnActiveMeetups } from './array-practice/task10';
+
+// console.log('=============');
+// console.log('any', any([0, 1, 2, 0], x => x >= 2)); // -> true
+// console.log('any', any([0, 0, 1, 0])); // -> true
+// console.log('any', any([0, 0, 0, 0])); // -> false
+// console.log('=============');
+// console.log('arrayDiff', arrayDiff([1, 2, 3], [1, 2, 4])); // -> [3, 4]
+// console.log('arrayDiff', arrayDiff([1, 3, 3, 4], [1, 3, '4'])); // -> [4, '4']
+// console.log('=============');
+// console.log('forEachRight', forEachRight([1, 2, 3, 4], val => console.log(val)));
+// console.log('=============');
+// console.log('union', union([5, 1, 2, 3, 3], [4, 3, 2])); // -> [5, 1, 2, 3, 4]
+// console.log('union', union([5, 1, 3, 3, 4], [1, 3, 4])); // -> [5, 1, 3, 4]
+// console.log('=============');
+// const generator = createGenerator([1, '6', 3, 2]);
+// console.log('createGenetator', generator.next()); // -> 1
+// console.log('createGenetator', generator.next()); // -> '6'
+// console.log('createGenetator', generator.next()); // -> 3
+// console.log('createGenetator', generator.next()); // -> 2
+// console.log('createGenetator', generator.next()); // -> 'Complete!'
+// console.log('createGenetator', generator.next()); // -> 'Complete!'
+// console.log('=============');
+// console.log(
+//   'transformArrayToNumber',
+//   transformArrayToNumber([10, 20, 30], (acc, item) => acc + item)
+// ); // -> 60
+// console.log(
+//   'transformArrayToNumber',
+//   transformArrayToNumber([10, 20, 30], (acc, item) => acc + item, 10)
+// ); // -> 70
+// console.log(
+//   'transformArrayToNumber',
+//   transformArrayToNumber([10, 20, 30], (acc, item) => acc * item)
+// ); // -> 0
+// console.log(
+//   'transformArrayToNumber',
+//   transformArrayToNumber([10, 20, 30], (acc, item) => acc * item, 1)
+// ); // -> 6000
+// console.log(
+//   'transformArrayToNumber',
+//   transformArrayToNumber([10, 20, 30], (acc, item) => acc - item)
+// ); // -> -60
+// console.log('=============');
+// console.log('take', take([1, 2, 3], 5)); // -> [1, 2, 3]
+// console.log('take', take([1, 2, 3], 2)); // -> [1, 2]
+// console.log('=============');
+// console.log('without', without([2, 1, 2, 3], 1, 2)); // -> [3]
+// console.log('without', without([2, 1, 10, 20], 1, 2)); // -> [10, 20]
+// console.log('=============');
+// console.log('indexOfAll', indexOfAll([1, 2, 3, 1, 2, 3], 1)); // -> [0, 3]
+// console.log('indexOfAll', indexOfAll([1, 2, 3], 4)); // -> []
+// console.log('=============');
+// console.log(membersOnActiveMeetups(meetups)); // 1500

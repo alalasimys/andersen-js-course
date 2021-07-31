@@ -15,3 +15,12 @@
  * generator.next(); -> 'Complete!'
  * generator.next(); -> 'Complete!'
  */
+
+export default function createGenerator(arr) {
+  let nextIndex = 0;
+  return {
+    next: function() {
+      return nextIndex < arr.length ? arr[nextIndex++] : 'Complete!';
+    },
+  };
+}
