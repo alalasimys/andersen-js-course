@@ -46,5 +46,8 @@
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.5.0"
+  },
+  "dependencies": {
+    "regenerator-runtime": "^0.13.9"
   }
 }
